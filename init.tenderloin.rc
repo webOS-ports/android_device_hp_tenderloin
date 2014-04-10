@@ -134,7 +134,7 @@ on boot
 
     # Enable power collapse where always safe
     write /sys/module/pm_8x60/modes/cpu0/power_collapse/suspend_enabled 1
-    write /sys/module/pm_8x60/modes/cpu0/power_collapse/idle_enabled 1
+    write /sys/module/pm_8x60/modes/cpu0/power_collapse/idle_enabled 0
     write /sys/module/pm_8x60/modes/cpu0/standalone_power_collapse/suspend_enabled 1
     write /sys/module/pm_8x60/modes/cpu0/standalone_power_collapse/idle_enabled 1
     write /sys/module/pm_8x60/modes/cpu1/power_collapse/idle_enabled 1
@@ -208,16 +208,10 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     user root
     disabled
  
-service thermald /system/bin/thermald
-    class core
-    user root
-    disabled
-
 service serial /sbin/serial
     class core
     disabled
     oneshot
 
-#on property:sys.boot_completed=1
-    #start mpdecision
-    #start thermald
+on property:sys.boot_completed=1
+    start mpdecision
