@@ -218,4 +218,4 @@ service serial /sbin/serial
 on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
     write /sys/block/mmcblk0/queue/scheduler row
-    start mpdecision
+    #start mpdecision
