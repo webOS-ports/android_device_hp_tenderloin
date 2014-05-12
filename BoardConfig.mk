@@ -58,6 +58,9 @@ USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
 
+# enable three buffers at all times
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+
 # Use legacy MM heap behavior
 TARGET_DISPLAY_INSECURE_MM_HEAP := true
 
