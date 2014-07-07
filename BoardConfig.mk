@@ -101,7 +101,7 @@ KERNEL_WIFI_MODULES:
 	arm-eabi-strip --strip-debug `find $(KERNEL_MODULES_OUT) -name *.ko`
 	$(MAKE) -C external/backports-wireless clean
 
-# TARGET_KERNEL_MODULES := KERNEL_WIFI_MODULES
+TARGET_KERNEL_MODULES := KERNEL_WIFI_MODULES
 
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/hp/tenderloin/recovery/recovery_ui.c
 BOARD_CUSTOM_GRAPHICS:= ../../../device/hp/tenderloin/recovery/graphics.c
