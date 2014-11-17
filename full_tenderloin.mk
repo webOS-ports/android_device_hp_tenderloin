@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
     device/hp/tenderloin/init.tenderloin.rc:root/init.tenderloin.rc \
     device/hp/tenderloin/fstab.tenderloin:root/fstab.tenderloin
 
-DEVICE_PACKAGE_OVERLAYS += device/hp/tenderloin-common/overlay-wifi
+DEVICE_PACKAGE_OVERLAYS += device/hp/tenderloin/overlay
 
 # Custom init files.
 PRODUCT_COPY_FILES += \
