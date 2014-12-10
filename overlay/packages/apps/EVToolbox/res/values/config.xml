@@ -6,4 +6,5 @@
     <bool name="config_has_mobile_data" translatable="false">false</bool>
     <bool name="config_has_mobile_radio" translatable="false">false</bool>
     <bool name="config_disableOldLocks" translatable="false">true</bool>
+    <string name="config_recommendedTabletDpi" translatable="false">160</string>
 </resources>
