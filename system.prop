@@ -13,7 +13,6 @@ debug.fb.rgb565 = 0
 debug.enabletr=false
 debug.egl.hw=1
 debug.egl.recordable.rgba8888=1
-ro.config.low_ram=true
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
