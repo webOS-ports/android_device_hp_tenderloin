@@ -29,8 +29,7 @@ $(call inherit-product, device/hp/tenderloin-common/tenderloin-common.mk)
 # of hardware-specific resource overrides, typically the frameworks and
 # application settings that are stored in resourced.
 PRODUCT_COPY_FILES += \
-    device/hp/tenderloin/init.tenderloin.rc:root/init.tenderloin.rc \
-    device/hp/tenderloin/fstab.tenderloin:root/fstab.tenderloin
+    device/hp/tenderloin/init.tenderloin.rc:root/init.tenderloin.rc
 
 DEVICE_PACKAGE_OVERLAYS += device/hp/tenderloin/overlay
 
