@@ -96,10 +96,15 @@ TARGET_KERNEL_CONFIG := cyanogenmod_tenderloin_defconfig
 TARGET_KERNEL_SOURCE := kernel/hp/tenderloin
 KERNEL_WIFI_MODULES:
 	$(MAKE) -C external/backports-wireless KLIB=$(KERNEL_SRC) KLIB_BUILD=$(KERNEL_OUT) defconfig-ath6kl
-	export CROSS_COMPILE=$(ARM_EABI_TOOLCHAIN)/arm-eabi-; $(MAKE) -C external/backports-wireless KLIB=$(KERNEL_SRC) KLIB_BUILD=$(KERNEL_OUT) ARCH=$(TARGET_ARCH) $(ARM_CROSS_COMPILE)
+	export CROSS_COMPILE=$(ARM_EABI_TOOLCHAIN)/arm-eabi-
+	$(MAKE) -C external/backports-wireless KLIB=$(KERNEL_SRC) KLIB_BUILD=$(KERNEL_OUT) ARCH=$(TARGET_ARCH) $(ARM_CROSS_COMPILE)
 	cp `find external/backports-wireless -name *.ko` $(KERNEL_MODULES_OUT)/
 	arm-eabi-strip --strip-debug `find $(KERNEL_MODULES_OUT) -name *.ko`
 	$(MAKE) -C external/backports-wireless KLIB=$(KERNEL_SRC) KLIB_BUILD=$(KERNEL_OUT) clean
+	$(MAKE) -C external/memnotify KERNEL_SRC=$(KERNEL_OUT) ARCH=$(TARGET_ARCH) $(ARM_CROSS_COMPILE)
+	cp `find external/memnotify -name *.ko` $(KERNEL_MODULES_OUT)/
+	arm-eabi-strip --strip-debug `find $(KERNEL_MODULES_OUT) -name *.ko`
+
 
 TARGET_KERNEL_MODULES := KERNEL_WIFI_MODULES
 
