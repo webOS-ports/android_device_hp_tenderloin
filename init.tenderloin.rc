@@ -242,12 +242,6 @@ service reboot_recovery /system/bin/moboot_control.sh recovery
 on post-fs-data
     setprop vold.post_fs_data_done 1
 
-on property:init.svc.pre-recovery=running
-    start reboot_recovery
-
-on property:sys.powerctl=reboot,recovery
-    start reboot_recovery
-
 on property:sys.boot_completed=1
     write /sys/block/mmcblk0/queue/scheduler row
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
