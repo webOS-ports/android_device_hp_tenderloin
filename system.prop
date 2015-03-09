@@ -37,6 +37,7 @@ ro.emmc = 1
 net.bt.name=Android
 
 persist.service.adb.enable=1
+persist.sys.isUsbOtgEnabled=true
 persist.sys.usb.config=mtp,adb
 
 ro.input.noresample=1
