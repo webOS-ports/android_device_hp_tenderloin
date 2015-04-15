@@ -60,6 +60,9 @@ on fs
     # mount partitions
     mount_all /fstab.tenderloin
 
+    # Enable zRAM
+    swapon_all /fstab.tenderloin
+
     setprop ro.crypto.fuse_sdcard true
 
     # sdcard service is sometimes too slow and can't create nodes properly
