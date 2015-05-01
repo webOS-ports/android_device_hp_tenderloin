@@ -29,9 +29,8 @@ PRODUCT_MOTD :="\n\n\n--------------------MESSAGE---------------------\nThank yo
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/ev/overlay/hot_reboot
 
-# Copy compatible prebuilt files
-PRODUCT_COPY_FILES +=  \
-    vendor/ev/prebuilt/xga/media/bootanimation.zip:system/media/bootanimation.zip
+# Bootanimation
+BOOT_ANIMATION_SIZE := xga
 
 # USB
 #ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mass_storage,adb
