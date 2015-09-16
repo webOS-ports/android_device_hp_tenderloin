@@ -30,6 +30,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/ev/overlay/hot_reboot
 
 # Bootanimation
+TARGET_BOOTANIMATION_HALF_RES := true
 BOOT_ANIMATION_SIZE := xga
 
 # USB
